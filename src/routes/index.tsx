@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BellRing, Package, ShoppingBag, Users } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import logoDark from "@/assets/logo-nature.png.asset.json";
 import heroImg from "@/assets/cosmetics-flatlay.jpg";
 import { STORE_NAME } from "@/lib/brand";
 
@@ -28,7 +27,11 @@ export const Route = createFileRoute("/")({
 });
 
 const features = [
-  { icon: BellRing, title: "Alertas de recompra", text: "Aviso 10 dias antes do prazo de 30 dias." },
+  {
+    icon: BellRing,
+    title: "Alertas de recompra",
+    text: "Aviso 10 dias antes do prazo de 30 dias.",
+  },
   { icon: ShoppingBag, title: "Pedidos", text: "Registre vendas com itens e pagamento." },
   { icon: Users, title: "Clientes", text: "Histórico e contato rápido pelo WhatsApp." },
   { icon: Package, title: "Produtos", text: "Catálogo com preço e estoque." },
@@ -39,10 +42,10 @@ function Index() {
     <main className="grid min-h-screen lg:grid-cols-2">
       <section className="flex flex-col justify-between px-6 py-10 sm:px-12 lg:px-16">
         <img
-          src={logoDark.url}
+          src="/logo-nature.png"
           alt={STORE_NAME}
-          width={1433}
-          height={1049}
+          width={1152}
+          height={768}
           className="h-auto w-40"
         />
         <div className="animate-rise my-12 max-w-lg">
@@ -53,8 +56,8 @@ function Index() {
             Cada cliente, no <em className="text-primary">momento certo</em> de voltar.
           </h1>
           <p className="mt-6 text-lg text-muted-foreground">
-            Registre pedidos, produtos e clientes, e saiba exatamente quem está perto de precisar
-            de uma recompra.
+            Registre pedidos, produtos e clientes, e saiba exatamente quem está perto de precisar de
+            uma recompra.
           </p>
           <Button asChild size="lg" className="mt-8 h-12 px-6 shadow-lift">
             <Link to="/dashboard">

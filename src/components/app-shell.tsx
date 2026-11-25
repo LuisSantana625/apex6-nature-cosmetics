@@ -30,13 +30,15 @@ export function AppShell() {
         <div className="flex items-center justify-between px-5 py-4 lg:block lg:px-6 lg:py-8">
           <div>
             <img
-              src="/favicon.png"
+              src="/logo-nature.png"
               alt={STORE_NAME}
-              width={1433}
-              height={1049}
-              className="h-auto w-28 lg:w-36"
+              width={1152}
+              height={768}
+              className="h-auto w-28 brightness-0 invert lg:w-36"
             />
-            <p className="mt-2 hidden text-xs text-sidebar-foreground/60 lg:block">Painel da loja</p>
+            <p className="mt-2 hidden text-xs text-sidebar-foreground/60 lg:block">
+              Painel da loja
+            </p>
           </div>
           <button
             onClick={signOut}
@@ -90,7 +92,9 @@ export function PageHeader({
     <header className="animate-rise mb-8 flex flex-wrap items-end justify-between gap-4">
       <div>
         {eyebrow && (
-          <p className="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">{eyebrow}</p>
+          <p className="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+            {eyebrow}
+          </p>
         )}
         <h1 className="text-4xl font-semibold sm:text-5xl">{title}</h1>
         {description && <p className="mt-2 max-w-2xl text-muted-foreground">{description}</p>}
