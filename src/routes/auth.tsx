@@ -5,7 +5,6 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import logoDark from "@/assets/logo-nature.png.asset.json";
 import heroImg from "@/assets/cosmetics-flatlay.jpg";
 import { supabase } from "@/integrations/supabase/client";
 import { STORE_NAME } from "@/lib/brand";
@@ -30,7 +29,10 @@ export const Route = createFileRoute("/auth")({
       { title: `Entrar — ${STORE_NAME}` },
       { name: "description", content: "Acesso restrito ao painel de pedidos e recompras da loja." },
       { property: "og:title", content: `Entrar — ${STORE_NAME}` },
-      { property: "og:description", content: "Acesso restrito ao painel de pedidos e recompras da loja." },
+      {
+        property: "og:description",
+        content: "Acesso restrito ao painel de pedidos e recompras da loja.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -72,18 +74,42 @@ function AuthPage() {
     <main className="grid min-h-screen lg:grid-cols-[1fr_1.1fr]">
       <section className="flex items-center justify-center px-6 py-12">
         <div className="animate-rise w-full max-w-sm">
-          <img src="/logo-nature.png" alt={STORE_NAME} width={1433} height={1049} className="h-auto w-40" />
+          <img
+            src="/logo-nature.png"
+            alt={STORE_NAME}
+            width={1152}
+            height={768}
+            className="h-auto w-40"
+          />
           <h1 className="mt-8 text-4xl font-semibold">Entrar no painel</h1>
-          <p className="mt-2 text-sm text-muted-foreground">Acesso liberado apenas para e-mails cadastrados.</p>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Acesso liberado apenas para e-mails cadastrados.
+          </p>
 
           <form onSubmit={onSubmit} className="mt-8 grid gap-4">
             <div className="grid gap-2">
               <Label htmlFor="email">E-mail</Label>
-              <Input id="email" type="email" required autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} className="h-11" />
+              <Input
+                id="email"
+                type="email"
+                required
+                autoComplete="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="h-11"
+              />
             </div>
             <div className="grid gap-2">
               <Label htmlFor="password">Senha</Label>
-              <Input id="password" type="password" required autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} className="h-11" />
+              <Input
+                id="password"
+                type="password"
+                required
+                autoComplete="current-password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="h-11"
+              />
             </div>
             <Button type="submit" className="h-11" disabled={loading}>
               {loading ? "Aguarde…" : "Entrar"}
@@ -92,7 +118,13 @@ function AuthPage() {
         </div>
       </section>
       <section className="relative hidden overflow-hidden lg:block">
-        <img src={heroImg} alt="" width={1024} height={1280} className="absolute inset-0 h-full w-full object-cover" />
+        <img
+          src={heroImg}
+          alt=""
+          width={1024}
+          height={1280}
+          className="absolute inset-0 h-full w-full object-cover"
+        />
       </section>
     </main>
   );
