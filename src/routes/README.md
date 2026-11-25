@@ -1,9 +1,6 @@
-# Routes
+# Rotas
 
-TanStack Start uses **file-based routing**. Every `.tsx` file in this directory
-defines a route. Do **not** create `src/pages/`, `src/routes/_app/index.tsx`, or
-`app/layout.tsx` — those are Next.js / Remix conventions. The only root layout
-is `src/routes/__root.tsx`.
+A aplicação usa TanStack Router com roteamento baseado em arquivos, gerado pelo plugin do Vite. Cada arquivo `.tsx` nesta pasta define uma rota. A rota raiz e o layout global ficam em `src/routes/__root.tsx`.
 
 ## Conventions
 
@@ -15,7 +12,7 @@ is `src/routes/__root.tsx`.
 | `users/$id.tsx` | `/users/:id` (dynamic — bare `$`, no curly braces) |
 | `posts/{-$category}.tsx` | `/posts/:category?` (optional segment) |
 | `files/$.tsx` | `/files/*` (splat — read via `_splat` param, never `*`) |
-| `_layout.tsx` | layout route (renders children via `<Outlet />`) |
-| `__root.tsx` | app shell — wraps every page; preserve `<Outlet />` |
+| `_layout.tsx` | rota de layout (renderiza as filhas com `<Outlet />`) |
+| `__root.tsx` | rota raiz — envolve as páginas; preserve `<Outlet />` |
 
-`routeTree.gen.ts` is auto-generated. Don't edit it by hand.
+`src/routeTree.gen.ts` é gerado automaticamente. Não edite esse arquivo manualmente.

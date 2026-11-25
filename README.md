@@ -1,24 +1,23 @@
-# Naturé Cosmetics
+# Naturê Cosméticos — Vite + React
 
-Bom dia lovable, preciso criar uma interface, de um site de cosméticos, onde a persona irá registar os pedidos, produtos, clientes, alertas de recompras e entre outras informações. O alerta de recompra desejo que seja um dashboard, que tem como alerta a aproximação de 10 dias para o prazo de 30 dias após o ato da compra.
+Versão do painel de gerenciamento de pedidos, produtos, clientes e alertas de recompra portada do Lovable para Vite + React. O roteamento continua usando TanStack Router; a aplicação roda no navegador e acessa o Supabase com as políticas RLS existentes.
 
-This project was built with [Lovable](https://lovable.dev).
+## Desenvolvimento
 
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/0e04e515-ca5c-5daa-9a43-5353ec322cf2).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Requer Node.js 20.19+ ou 22.12+ e npm.
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+npm install
 npm run dev
+```
+
+Configure `VITE_SUPABASE_URL` e `VITE_SUPABASE_PUBLISHABLE_KEY` no ambiente local para conectar ao Supabase. Não use chaves de service role no navegador.
+
+## Validação
+
+```sh
+npm run build
+npm run typecheck
+npm test
+npm run lint
 ```
