@@ -11,7 +11,7 @@ Registro consolidado das ações, decisões técnicas, configurações de ambien
 * **API Endpoint (Supabase URL):** `https://<project-ref>.supabase.co`
 * **Repositório Principal (Base):** https://github.com/keyllacristine/apex6-nature
 * **Repositório de Deploy (Fork):** https://github.com/LuisSantana625/apex6-nature
-
+* **Vídeo de Demonstração da Aplicação:** https://drive.google.com/file/d/18_dLT93I7USJ83gfdG2FyvLK1LLDesM1/view?usp=drive_link
 ---
 
 ## Equipe e Responsabilidades
