@@ -79,6 +79,9 @@ apex6-nature-cosmetics/
 ├── vercel.json             # Configuração de rewrites para rotas SPA na Vercel
 ├── vite.config.ts          # Configurações de build do Vite
 └── vitest.config.ts        # Configurações de testes automatizados (Vitest)
+```
+
+---
 
 ## Como Executar Localmente
 
@@ -90,18 +93,27 @@ apex6-nature-cosmetics/
 ### Passo a Passo
 
 1. **Clone o repositório:**
-   `git clone https://github.com/LuisSantana625/apex6-nature-cosmetics.git && cd apex6-nature-cosmetics`
+   ```bash
+   git clone https://github.com/LuisSantana625/apex6-nature-cosmetics.git
+   cd apex6-nature-cosmetics
+   ```
 
 2. **Instale as dependências:**
-   `npm install`
+   ```bash
+   npm install
+   ```
 
 3. **Configure as variáveis de ambiente:**
    Crie ou ajuste o arquivo `.env` na raiz do projeto com as credenciais públicas do seu projeto Supabase:
-   * `VITE_SUPABASE_URL=https://<project-ref>.supabase.co`
-   * `VITE_SUPABASE_PUBLISHABLE_KEY=<sua-publishable-key>`
+   ```env
+   VITE_SUPABASE_URL=https://<project-ref>.supabase.co
+   VITE_SUPABASE_PUBLISHABLE_KEY=<sua-publishable-key>
+   ```
 
 4. **Inicie o servidor de desenvolvimento:**
-   `npm run dev`
+   ```bash
+   npm run dev
+   ```
 
 5. Acesse `http://localhost:5173` (ou a porta exibida no terminal).
 
