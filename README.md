@@ -6,7 +6,7 @@ Registro consolidado das ações, decisões técnicas, configurações de ambien
 
 ## Links do Projeto e Infraestrutura
 
-* **Aplicação em Produção (Vercel):** https://apex6-nature-cosmetics.vercel.app/ *(substitua pelo link gerado no painel da Vercel)*
+* **Aplicação em Produção (Vercel):** https://apex6-nature-cosmetics.vercel.app/
 * **Projeto Supabase (Dashboard):** `https://supabase.com/dashboard/project/<project-ref>` *(substitua pelo ID do seu projeto)*
 * **API Endpoint (Supabase URL):** `https://<project-ref>.supabase.co`
 * **Repositório Principal (Base):** https://github.com/keyllacristine/apex6-nature
